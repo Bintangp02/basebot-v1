@@ -1293,7 +1293,7 @@ let buttons = [
             const somtoy = rslot[Math.floor(Math.random() * rslot.length)]
             let sloth =`[  🎰VIRTUAL SLOT 🎰  ]\n------------------------\n\n🍒 : 🍌 : 🍇\n${somtoy}<=====\n🍇 : 🍌 : 🍒\n\n------------------------\n[  🎰 VIRTUAL SLOT 🎰  ]\n\n*Keterangan* :\n_Jika Mendapatkan 3Buah Sama_\n_Berarti Kamu Win_\n\n_Contoh : 🍒 : 🍒 : 🍒_ <=====`
             let buttons = [{ buttonId: 'slot', buttonText: { displayText: '🎰MAIN LAGI🎰' }, type: 1 }]
-            await naze.sendButtonText(m.chat, buttons, sloth, nyoutube, m)
+            await danzz.sendButtonText(m.chat, buttons, sloth, nyoutube, m)
             }
             break
         case 'ttc': case 'ttt': case 'tictactoe': {
