@@ -115,7 +115,7 @@ console.log(color(figlet.textSync('danzz Botz', {
 	    width: 90,
 		whitespaceBreak: true
         }), `${randomcolor}`))
-	console.log(color(`${spc2}           [ CREATOR BY: danzz GODING ]` ,`${randomcolor}`))
+	console.log(color(`${spc2}           [ CREATOR BY: Danzz Coding ]` ,`${randomcolor}`))
 	console.log(color(`${spc4}                       < =============================== >`, `${randomcolor}`))
 	console.log(color(`${spc3}                    [•]`, `${randomcolor}`), color(`Hai         : i.m ${namabot}`, `${randomcolor}`))
 	console.log(color(`${spc3}                    [•]`, `${randomcolor}`), color(`Bot Version : 1.0.0`, `${randomcolor}`))
