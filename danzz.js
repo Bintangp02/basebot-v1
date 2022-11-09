@@ -92,7 +92,29 @@ module.exports = danzz = async (danzz, m, store, chatUpdate) => {
     	const isBotAdmins = m.isGroup ? groupAdmins.includes(botNumber) : false
     	const isAdmins = m.isGroup ? groupAdmins.includes(m.sender) : false
     	const isPremium = isOwner || global.premium.map(v => v.replace(/[^0-9]/g, '') + '@s.whatsapp.net').includes(m.sender) || false
-    	
+    	const rslot = [
+		'🍊 : 🍒 : 🍐',
+		'🍒 : 🔔 : 🍊',
+		'🍇 : 🍇 : 🍇',
+		'🍊 : 🍋 : 🔔',
+		'🔔 : 🍒 : 🍐',
+		'🔔 : 🍒 : 🍊',
+        '🍊 : 🍋 : 🔔',		
+		'🍐 : 🍒 : 🍋',
+		'🍐 : 🍐 : 🍐',
+		'🍊 : 🍒 : 🍒',
+		'🔔 : 🔔 : 🍇',
+		'🍌 : 🍒 : 🔔',
+		'🍐 : 🔔 : 🔔',
+		'🍊 : 🍋 : 🍒',
+		'🍋 : 🍋 : 🍌',
+		'🔔 : 🔔 : 🍇',
+		'🔔 : 🍐 : 🍇',
+		'🔔 : 🔔 : 🔔  Win',
+		'🍒 : 🍒 : 🍒 Win',
+		'🍌 : 🍌 : 🍌 Lose'
+		]
+    
     	// Limit
     	try {
             let isNumber = x => typeof x === 'number' && !isNaN(x)
@@ -654,6 +676,8 @@ ${symbol2} ${prefix}family100
 ${symbol2} ${prefix}tebak [option]
 ${symbol2} ${prefix}math [mode]
 ${symbol2} ${prefix}suitpvp [@tag]
+${symbol2} ${prefix}slot
+${symbol2} ${prefix}afk
 
 *Group*
 ${symbol2} ${prefix}linkgroup
@@ -1210,7 +1234,14 @@ let buttons = [
                 user.afkReason = text
                 m.reply(`${m.pushName} Telah Afk${text ? ': ' + text : ''}`)
             }
-            break	
+            break
+		case 'slot': {
+            const somtoy = rslot[Math.floor(Math.random() * rslot.length)]
+            let sloth =`[  🎰VIRTUAL SLOT 🎰  ]\n------------------------\n\n🍒 : 🍌 : 🍇\n${somtoy}<=====\n🍇 : 🍌 : 🍒\n\n------------------------\n[  🎰 VIRTUAL SLOT 🎰  ]\n\n*Keterangan* :\n_Jika Mendapatkan 3Buah Sama_\n_Berarti Kamu Win_\n\n_Contoh : 🍒 : 🍒 : 🍒_ <=====`
+            let buttons = [{ buttonId: 'slot', buttonText: { displayText: '🎰MAIN LAGI🎰' }, type: 1 }]
+            await naze.sendButtonText(m.chat, buttons, sloth, nyoutube, m)
+            }
+            break
         case 'ttc': case 'ttt': case 'tictactoe': {
             let TicTacToe = require("./lib/tictactoe")
             this.game = this.game ? this.game : {}
@@ -1891,7 +1922,7 @@ let teks = `══✪〘 *👥 Tag All* 〙✪══
                 { buttonId: 'chatwith2 ${sender.replace("@s.whatsapp.net", "")}', buttonText: { displayText: 'Balas Menfes' }, type:1 },
                 { buttonId: 'menfess', buttonText: { displayText: 'Kirim Menfesmu' }, type: 1 }]
                let but = [{ buttonId: 'menfess', buttonText: { displayText: 'kirim menfes lg' }, type: 1 }]
-            await danzz.sendMessage(m1 + '@s.whatsapp.net', { caption: pjtxt, location: { jpegThumbnail: await reSize(ivg, 300, 200)}, buttons, footer: `Ciee ada yang ngirim pesan nih\n© Danzz`}, {quoted: ftroli})
+            await danzz.sendMessage(m1 + '@s.whatsapp.net', { caption: pjtxt, location: { jpegThumbnail: await reSize(ivg, 300, 200)}, buttons, footer: `Ciee ada yang ngirim pesan nih\n${global.wm}`}, {quoted: ftroli})
             let akhji = `Pesan Telah Terkirim\nKe @${mq1.split('@')[0]}`
             await danzz.sendButtonText(m.chat, but, akhji, nyoutube, m, {mentions: ments})
             }
@@ -1905,7 +1936,6 @@ case 'chatwith2': {
 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Di Dalam Group!')
 danzz.sendMessage(q+'@s.whatsapp.net', {text: `Sudah Di Confirmasi Nih Menfess nyaa ntar lagi dia balas🤭`})
 if(!q) return reply("Masukan nomer target yang mau di chat")
-if (roomA || roomB ) return reply("Kamu masih berada di dalam room anonymous,  ketik keluar untuk keluar dari room anonymous mu")
 let id = + new Date
 const obj = {
 id,
@@ -1921,7 +1951,6 @@ m.reply(`Silahkan membalas menfess dengan ketik sesuatu maka bot akan otomatis m
 break
 case 'stopmenfes': {
 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
-if(roomA && roomA.state == "CHATTING"){
 await danzz.sendMessage(roomA.b, {text:" Yah dia telah meninggalkan chat Menfes"})
 await setTimeout(() => {
 reply("Kamu telah keluar dari Menfes")
