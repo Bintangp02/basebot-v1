@@ -57,6 +57,7 @@ let tebakkalimat = db.data.game.kalimat = []
 let tebaklirik = db.data.game.lirik = []
 let tebaktebakan = db.data.game.tebakan = []
 let vote = db.data.others.vote = []
+let user = JSON.parse(fs.readFileSync('./database/user.json'));
 
 randommp3 = ['males','buatapa','anjing','apa','araara','wataisi','arigatou','mastah']
 const randomaudio = randommp3[Math.floor(Math.random() * (randommp3.length))]
