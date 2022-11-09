@@ -549,7 +549,59 @@ Selama ${clockString(new Date - user.afkTime)}`)
         // End
 		switch(command) {
 		
-		// Start Cmd                        
+		// Start Cmd
+case 'daftar':
+case 'registrasi':
+case 'register':
+case 'registered':
+case 'regis':{
+let mm = args.join(' ')
+let m1 = mm.split("|")[0];
+let m2 = mm.split("|")[1];
+let m3 = mm.split("|")[2];
+if (isGroup) {
+reply('🇮🇩 _Bot telah mengirimkan list pendaftaran ke private chat, silahkan selesaikan agar dapat menggunakan fitur bot._\n\n🇺🇸 _The bot has sent a registration list to the private chat, please complete it so you can use the bot feature._')
+if (!m2) return danzz.sendMessage(sender, { text: `🇮🇩 _Hi @${sender.split("@")[0]} silahkan pilih umur kamu dengan cara pencet dibawah ini._\n\n🇺🇸 _Hi @${sender.split("@")[0]} please select your age by pressing the button below._`, footer: `${botName} © 2022`, buttonText: "Click Here", sections: [{title: "📆Select Your Age Here!!", rows: [{title: "🎰 Random Years", rowId: "#daftar "+pushname+"|"+pickRandom(["5","6","7","8","9","10","11","12","13","14","15","16","17","18","19","20","21","22","23","24","25","26","27","28","29","30","31","32","34","35","36","37","38","39","40","41","42","43","44","45","46","47","48","49","50",",51","52","53","54","55","56","57","58","59","60"])},{title: "💫60• Years", rowId: "#daftar "+pushname+"|"+"60"},{title: "💫59• Years", rowId: "#daftar "+pushname+"|"+"59"},{title: "💫58• Years", rowId: "#daftar "+pushname+"|"+"58"},{title: "💫57• Years", rowId: "#daftar "+pushname+"|"+"57"},{title: "💫56• Years", rowId: "#daftar "+pushname+"|"+"56"},{title: "💫55• Years", rowId: "#daftar "+pushname+"|"+"56"},{title: "💫54• Years", rowId: "#daftar "+pushname+"|"+"54"},{title: "💫53• Years", rowId: "#daftar "+pushname+"|"+"53"},{title: "💫52• Years", rowId: "#daftar "+pushname+"|"+"52"},{title: "💫51• Years", rowId: "#daftar "+pushname+"|"+"51"},{title: "💫50• Years", rowId: "#daftar "+pushname+"|"+"50"},{title: "💫49• Years", rowId: "#daftar "+pushname+"|"+"49"},{title: "💫48• Years", rowId: "#daftar "+pushname+"|"+"48"},{title: "💫47• Years", rowId: "#daftar "+pushname+"|"+"47"},{title: "💫46• Years", rowId: "#daftar "+pushname+"|"+"46"},{title: "💫45• Years", rowId: "#daftar "+pushname+"|"+"45"},{title: "💫44• Years", rowId: "#daftar "+pushname+"|"+"44"},{title: "💫43• Years", rowId: "#daftar "+pushname+"|"+"43"},{title: "💫42• Years", rowId: "#daftar "+pushname+"|"+"42"},{title: "💫41• Years", rowId: "#daftar "+pushname+"|"+"41"},{title: "💫40• Years", rowId: "#daftar "+pushname+"|"+"40"},{title: "💫39• Years", rowId: "#daftar "+pushname+"|"+"39"},{title: "💫38• Years", rowId: "#daftar "+pushname+"|"+"38"},{title: "💫37• Years", rowId: "#daftar "+pushname+"|"+"37"},{title: "💫36• Years", rowId: "#daftar "+pushname+"|"+"36"},{title: "💫35• Years", rowId: "#daftar "+pushname+"|"+"35"},{title: "💫34• Years", rowId: "#daftar "+pushname+"|"+"34"},{title: "💫33• Years", rowId: "#daftar "+pushname+"|"+"33"},{title: "💫32• Years", rowId: "#daftar "+pushname+"|"+"32"},{title: "💫31• Years", rowId: "#daftar "+pushname+"|"+"31"},{title: "💫30• Years", rowId: "#daftar "+pushname+"|"+"30"},{title: "💫29• Years", rowId: "#daftar "+pushname+"|"+"39"},{title: "💫28• Years", rowId: "#daftar "+pushname+"|"+"28"},{title: "💫27• Years", rowId: "#daftar "+pushname+"|"+"27"},{title: "💫26• Years", rowId: "#daftar "+pushname+"|"+"26"},{title: "💫25• Years", rowId: "#daftar "+pushname+"|"+"25"},{title: "💫24• Years", rowId: "#daftar "+pushname+"|"+"24"},{title: "💫23• Years", rowId: "#daftar "+pushname+"|"+"23"},{title: "💫22• Years", rowId: "#daftar "+pushname+"|"+"22"},{title: "💫21• Years", rowId: "#daftar "+pushname+"|"+"21"},{title: "💫20• Years", rowId: "#daftar "+pushname+"|"+"20"},{title: "💫19• Years", rowId: "#daftar "+pushname+"|"+"19"},{title: "💫18• Years", rowId: "#daftar "+pushname+"|"+"18"},{title: "💫17• Years", rowId: "#daftar "+pushname+"|"+"17"},{title: "💫16• Years", rowId: "#daftar "+pushname+"|"+"16"},{title: "💫15• Years", rowId: "#daftar "+pushname+"|"+"15"},{title: "💫14• Years", rowId: "#daftar "+pushname+"|"+"14"},{title: "💫13• Years", rowId: "#daftar "+pushname+"|"+"13"},{title: "💫12• Years", rowId: "#daftar "+pushname+"|"+"12"},{title: "💫11• Years", rowId: "#daftar "+pushname+"|"+"11"},{title: "💫10• Years", rowId: "#daftar "+pushname+"|"+"10"},{title: "💫9• Years", rowId: "#daftar "+pushname+"|"+"9"},{title: "💫8• Years", rowId: "#daftar "+pushname+"|"+"8"},{title: "💫7• Years", rowId: "#daftar "+pushname+"|"+"7"},{title: "💫6• Years", rowId: "#daftar "+pushname+"|"+"6"},{title: "💫5• Years", rowId: "#daftar "+pushname+"|"+"5"}]}], mentions: [`${sender}`]}, { quoted: fkontak })
+}
+if (!m1) return reply(`Ex : ${prefix+command} Nama\n\nContoh :\n${prefix+command} RonzzOfc`)
+if (m1 && !m2 && !m3) {
+user.push({id: sender, name: m1})
+fs.writeFileSync('./database/user.json', JSON.stringify(user))
+}
+if (m1 && m2 && !m3) {
+user.push({id: sender, name: m1, umur: m2})
+fs.writeFileSync('./database/user.json', JSON.stringify(user))
+}
+if (!m3) return danzz.sendMessage(sender, { text: `🇮🇩 _Hi @${sender.split("@")[0]} silahkan pilih jenis kelamin kamu dengan cara pencet dibawah ini._\n\n🇺🇸 _Hi @${sender.split("@")[0]} please select your gender by pressing the button below._`, footer: `${botName} © 2022`, buttonText: "Click Here", sections: [{title: "♂Select Your Gender Here!!", rows: [{title: "♂ Male / Cowo", rowId: "#daftar "+pushname+"|"+cekUser("umur", sender)+"|"+pickRandom(["Laki-Laki","Cowo","Pria"])},{title: "♀ Female / Cewe", rowId: "#daftar "+pushname+"|"+cekUser("umur", sender)+"|"+pickRandom(["Perempuan","Cewe","Wanita"])}]}], mentions: [`${sender}`]}, { quoted: fkontak })
+if (m1 && m2 && m3) {
+user.push({id: sender, name: m1, umur: m2, gender: m3})
+fs.writeFileSync('./database/user.json', JSON.stringify(user))
+}
+const nomor_resi = require("crypto").randomBytes(5).toString("hex").toUpperCase()
+let resiNya = `${nomor_resi}`
+let registerOnNya = `tnggl`
+let teks_daftar =`*──────❲ VERIFIKASI SUKSES ❳──────*
+*Nama :* ${m1}
+*Umur :* ${m2} Tahun
+*Gender :* ${m3}
+*Resi :* ${resiNya}
+*Register On :* ${registerOnNya}
+*Nomor :* ${sender.split('@')[0]}
+*Status :* ${isOwner? 'Owner':'User'} ${botName}
+*User Ke :* ${user.length}
+*Saldo :* Rp${toRupiah(_saldo.checkSaldonya(sender, db_saldo_user))}
+*Hit Cmd :* 1
+
+Silahkan ketik *#rules* sebelum memulai bot.`
+if (m1 && m2 && m3) {
+user.push({id: sender, name: m1, umur: m2, gender: m3, resi: resiNya, registerOn: registerOnNya})
+fs.writeFileSync('./database/user.json', JSON.stringify(user))
+danzz.sendMessage(sender, { text: `*Memuat Data* › @${sender.split('@')[0]}`, mentions: [ `${sender.split('@')[0]}@s.whatsapp.net` ]}, { quoted: msg })
+danzz.sendMessage(sender, { image: { url: ppnu }, caption: teks_daftar }, { quoted: msg }) 
+}
+}
+addCmd(command, 1, db_dashboard)
+break
             case 'menu': case 'help': case 'm': {
             let me = m.sender
             let menu = `
@@ -1951,32 +2003,6 @@ fs.writeFileSync('./database/menfess.json', JSON.stringify(anonChat))
 m.reply(`Silahkan membalas menfess dengan ketik sesuatu maka bot akan otomatis meneruskan chat kamu ke pengirim menfes\nDan ketika pengirim menfes membalas chat kamu bot juga akan meneruskannya\nUntuk berhenti membalas ketik ${prefix}stopmenfes.`)
 }
 break
-case 'stopmenfes': {
-if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
-await danzz.sendMessage(roomA.b, {text:" Yah dia telah meninggalkan chat Menfes"})
-await setTimeout(() => {
-reply("Kamu telah keluar dari Menfes")
-roomA.a = roomA.b
-roomA.b = ""
-roomA.state = "WAITING"
-roomA.expired = Date.now() + toMs("5m")
-fs.writeFileSync('./database/menfess.json', JSON.stringify(anonChat))  
-},1000)
-} else if(roomA && roomA.state == "WAITING"){
-m.reply("Kamu telah keluar dari Menfes")
-anonChat.splice(anonChat.indexOf(roomA, 1)) 
-fs.writeFileSync('./database/menfess.json', JSON.stringify(anonChat))
-} else if(roomB && roomB.state == "CHATTING"){
-await danzz.sendMessage(roomB.a,{text:`Partnermu telah meninggalkan room anonymous`})
-m.reply("Kamu telah keluar dari Menfes dan meninggalkan nya") 
-roomB.b =""
-roomB.state = "WAITING"
-roomB.expired = Date.now() + toMs("5m")
-fs.writeFileSync('./database/menfess.json', JSON.stringify(anonChat))
-} else m.reply(`Kamu sedang tidak ada menfes`)
-}
-break
-			
 		case 'anonymous': {
                 if (m.isGroup) return m.reply('Fitur Tidak Dapat Digunakan Untuk Group!')
 				this.anonymous = this.anonymous ? this.anonymous : {}
