@@ -750,7 +750,8 @@ ${symbol2} ${prefix}delete (msg)`
             
             case 'tqto': case 'thanksto': case 'contributor': {
             let tqto = `
-*THANKS TO*
+*THANKS TO*`
+let tag = `
 @Adiwajshing (Baileys)
 @Dika Ardnt (Base)
 @Saipul Anuar (Partner)
@@ -768,7 +769,7 @@ https://danzzapi.xyz (danzz)`
                 let buttonMessage = {
                     image: { url: 'https://telegra.ph/file/6d3a9d6f88c9d5bbb0330.jpg' },
                     caption: `${tqto}`,
-                    footer: `${global.wm}`,
+                    footer: `${tag}\n\n${global.wm}`,
                     buttons: buttons,
                     headerType: 4
                 }
@@ -778,7 +779,8 @@ https://danzzapi.xyz (danzz)`
         
 	    	case 'rules': {
             let rules = `
-*RULES*
+*RULES*`
+let rulesnya = `
 1. Jangan Pernah Spam Bot
 2. Jangan Call Nomer Bot
 3. Jangan Mengeksploitasi Bot
@@ -839,7 +841,7 @@ Ini`
                 let buttonMessage = {
                     image: { url: 'https://telegra.ph/file/6d3a9d6f88c9d5bbb0330.jpg' },
                     caption: `${rules}`,
-                    footer: `${global.wm}`,
+                    footer: `${rulesnya}\n\n${global.wm}`,
                     buttons: buttons,
                     headerType: 4
                 }
@@ -849,8 +851,8 @@ Ini`
            
        case 'donasi': case 'donate': {
 let payment = `
-*Hai Kak ${pushname}, ${sayyingTime}*
-
+*Hai Kak ${pushname}, ${sayyingTime}*`
+let donate = `
 donate to me so that the bot can develop more.
 
 *e-wallet*
@@ -864,7 +866,7 @@ let buttons = [
                 let buttonMessage = {
                     image: { url: 'https://telegra.ph/file/6d3a9d6f88c9d5bbb0330.jpg' },
                     caption: `${payment}`,
-                    footer: `${global.wm}`,
+                    footer: `${donate}\n\n${global.wm}`,
                     buttons: buttons,
                     headerType: 4
                 }
